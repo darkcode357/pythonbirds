@@ -13,3 +13,5 @@ if __name__ == '__main__':
     luiz = Pessoa(darkcode,nome="luiz")
     for filho in luiz.filhos:
         print(filho.nome)
+    print(darkcode.__dict__)
+    print(luiz.__dict__)
