@@ -1,11 +1,15 @@
 class Pessoa:
-    def __init__(self,nome=None,idade=35):
+    def __init__(self,*filhos,nome=None,idade=35):
         self.idade = idade
         self.nome = nome
+        self.filhos = list(filhos)
     def comprimentar(self):
         return f'olá{id(self)}'
 
 if __name__ == '__main__':
-    p = Pessoa("darkcode")
-    print(id(p))
-    print(p.nome)
+    darkcode = Pessoa(nome="darkcode")
+    print(id(darkcode))
+    print(darkcode.nome)
+    luiz = Pessoa(darkcode,nome="luiz")
+    for filho in luiz.filhos:
+        print(filho.nome)
